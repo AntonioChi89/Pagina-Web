@@ -1,4 +1,4 @@
 
 function mialerta() {  
-    alert("Por Favor Registrese Para poder Realizar Esta");
+    alert("!Por Favor Regístrese Para poder Realizar Esta Acción¡");
 } 
