@@ -79,15 +79,18 @@ body{
     font-size: 2rem;
     font-weight: 300;
     margin: 15px 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 .hero__cta{
     display: inline-block;
-    background: #7b31dd;
+    background: #e6e2eb;
     padding: var(--boton-padding);
-    color: var(--color-primary);
+    color: #000;
     text-decoration: none;
+    font-weight: bold;
     border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
    
 }
 
@@ -231,4 +234,127 @@ body{
     align-items: center;
     
 
+}
+
+/*area de la ventana emergente*/
+
+.overlay{
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.popup.active{
+    visibility: visible;
+}
+
+
+.popup{
+    background: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .4);
+    border-radius: 40px;
+    font-family: 'Poppins', sans-serif;
+    padding: 25px;
+    text-align: center;
+    width: 600px;
+    transition: .2 ease all;
+    transform: scale(0.7);
+    opacity: 0;
+    
+
+}
+
+.popup .btn-cerrar-popup{
+    font-size: 20px;
+    line-height: 17px;
+    display: block;
+    text-align: right;
+    color: #BBBBBB;
+    transition: .3s ease all;
+    color:#000;
+
+}
+
+.popup .btn-cerrar-popup:hover{
+    color: red;
+}
+
+.popup img{
+    height: 80px;
+    width: 80px;
+}
+.popup h3{
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.popup h4{
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 13px;
+}
+
+.popup input[type="submit"]{
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color:#0c0c0c;
+    background: orange;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.popup input[type="submit"]:hover{
+    color: #fff;
+}
+
+
+/* ------------------------- */
+/* ANIMACIONES */
+/* ------------------------- */
+.popup.active {	transform: scale(1); opacity: 1; }
+.popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
+.popup.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
+.popup.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
+
+@keyframes entradaTitulo {
+	from {
+		opacity: 0;
+		transform: translateY(-25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaSubtitulo {
+	from {
+		opacity: 0;
+		transform: translateY(25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaInputs {
+	from { opacity: 0; }
+	to { opacity: 1; }
 }
