@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+body{
+    background-color: #fefffc;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+   
+}
 :root{
     --background: linear-gradient(135deg, #667eea7e 0%, #764ba298 100%);
     --color-primary:#667eea; 
@@ -23,7 +29,7 @@
 
 .hero{
     height: 100vh;
-    background-image: var(--background), url();
+    background-image: var(--background), url(../imagenes/fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -31,46 +37,198 @@
     position: relative;
 }
 
-body{
-    background-color: #fefffc;
-    color: #000000;
-    font-family: 'Poppins', sans-serif;
+.hero .container{
+    padding: 0;
+}
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
+    align-items: center;
+    font-weight: 600;
+}
+
+.nav--footer{
+    font-weight: 300;
+    justify-content: flex-start;
+}
+
+.nav__items{
+    color: #0a0a0a;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 15px;
+    font-weight: inherit;
+}
+
+.nav__items--cta{
+    border: 3px solid #fff;
+}
+
+.nav__items--footer{
+    padding: 10px;
+}
+
+/*aquí comienza la parte del hero */
+.hero__title{
+    font-size: 3.2rem;   
+}
+
+.hero__subtitle{
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 15px 0;
+}
+
+.hero__cta{
+    display: inline-block;
+    background: #7b31dd;
+    padding: var(--boton-padding);
+    color: var(--color-primary);
+    text-decoration: none;
+    border-radius: 30px;
    
 }
 
-header{
-    position: fixed;
-    background-color: #000000;
+.hero__conatiner{
+    display: flex;
+    height: calc(100vh - 70px);
+    align-items: center;
+    color: #080808
+}
+
+.hero_wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    height: 11%;
-    z-index: 100%;
-    top: 0.0px;
+    height: 100px;
+}
+
+/* about */
+
+.presentation{
+    padding-top: 0;
+    text-align: center;
     
 }
 
-nav{
-   float: right;
+.presentation__picture{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.presentation__copy{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.presentation__cta{
+    display: inline-block;
+    margin-top: 30px;
+    background: var(--color-primary);
+    padding: var(--boton-padding);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    
+}
+
+.about{
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 80px;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+.about__img{
+    text-align: center;
+}
+
+.about__img--left{
+    text-align: left;
+}
+
+.about_picture{
+    max-width: 80%;
+}
+
+.about__paragraph{
+    margin-bottom: 23px;
+    line-height: 1.8;
+    font-weight:400
+}
+
+/* products */
+
+.products{
+    background: #28282b;
+}
+
+/* fooster*/
+
+.footer{
+    background: #3a59e4;
+}
+
+.nav__items{
+    color:#fefffc;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+}
+.footer__grid{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer__title{
+    font-weight: 500;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.footer__icons{
+    display: flex;
+    justify-content: space-evenly;
    
 }
 
-nav a{
-    color: aliceblue;
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
-    text-decoration-line: none;
-    overflow: hidden;
-    padding: 31px;
-
+.footer__conatiner-icons{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    color: #000000;
+    text-align: center;
+    border: 2px solid #0f0f0f;
+    border-radius: 66%;
 }
 
-nav a:link{
-    color: white
+.footer__icon{
+    color: inherit;
+    font-size: 35px;
+    text-decoration: none;
+    line-height: 65px;
+    text-align: center;
 }
 
-nav a:hover{
-    color:rgb(8, 8, 8);
-    text-decoration-line: none;
-    background-color: #ffffff;
+.fab .footer__icon{
+    line-height: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
-}
 
+}
